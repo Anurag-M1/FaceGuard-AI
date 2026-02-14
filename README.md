@@ -2,6 +2,8 @@
 
 Flask‑based web app for detecting facial/skin anomalies and returning a matched condition label with supplement info. Upload an image, run the model, and get a result page with the predicted condition.
 
+<img width="1470" height="812" alt="FaceGuard AI" src="https://github.com/user-attachments/assets/1436424d-6955-4516-a370-7b6a80ca53b7" />
+
 ## Features
 - Image upload + instant inference
 - Condition label mapped from model output
