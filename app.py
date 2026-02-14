@@ -46,16 +46,21 @@ def about():
 
 @app.route('/analyze', methods=['POST'])
 def analyze():
+    if 'file' not in request.files:
+        return jsonify({"error": "No file field found in request"}), 400
+
     image = request.files['file']
-    # print(image.filename)
     pathOfFile = os.path.join(os.getcwd(), 'images', image.filename)
     image.save(pathOfFile)
-    data = {}
 
-    # update the request
-    data['product_id'] = prediction(pathOfFile)
-    os.remove(pathOfFile)
-    return jsonify(data)
+    try:
+        data = {'product_id': prediction(pathOfFile)}
+        return jsonify(data)
+    except Exception as exc:
+        return jsonify({"error": str(exc)}), 500
+    finally:
+        if os.path.exists(pathOfFile):
+            os.remove(pathOfFile)
 
 
 if __name__ == '__main__':
