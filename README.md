@@ -53,7 +53,7 @@ python -m pip install flask keras tensorflow pillow numpy pandas
 python app.py
 ```
 Open http://localhost:5000
-live https://faceguard-ai-gg8d.onrender.com
+live https://faceguard-ai-qaw3.onrender.com
 
 ## API
 ### POST `/analyze`
