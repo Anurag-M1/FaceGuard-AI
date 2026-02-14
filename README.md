@@ -76,5 +76,5 @@ Then open:
 - Uploaded images are saved temporarily to `images/` and deleted after inference.
 - `supplement_info.csv` drives the label + supplement metadata used by the result page.
 
-## License
-MIT
+## Author
+Anurag Kumar Singh
